@@ -1,0 +1,19 @@
+﻿a {
+    color: #404040 !important;
+    text-decoration: none !important;
+    background-color: none !important;
+}
+
+card img {
+    border: 2px solid #333333;
+}
+
+.banner {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.mainContent {
+    visibility: hidden;
+}
