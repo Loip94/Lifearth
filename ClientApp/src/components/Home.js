@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import Icon from '@mdi/react';
 import { SpinnerComponent } from 'react-element-spinner';
-import { mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
+import { mdiFacebook, mdiInstagram, mdiTwitter, mdiArrangeBringForward } from '@mdi/js';
 import './Home.css';
 import './hover.css';
 
 import Homelogo from '../content/LifearthHomeLogo.jpg';
 import Portrait1 from '../content/Portrait1.jpg';
-import Portrait2 from '../content/Portrait2.jpg';
 import AndreaC from '../content/Andrea C.jpg';
 import Banner from '../content/banner_telegram.png';
 
@@ -17,9 +17,60 @@ export class Home extends Component {
     componentDidMount() {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
-            document.getElementsByClassName("loader-container")[0].remove();
-            document.getElementsByClassName("mainContent")[0].style.visibility = "visible";
+            if (document.getElementsByClassName("loader-container")[0] != undefined) {
+                document.getElementsByClassName("loader-container")[0].remove();
+                document.getElementsByClassName("mainContent")[0].style.visibility = "visible";
+            }
         }, 2500);
+
+        this.takeActualTime = setInterval(() => {
+            debugger;
+            var now = new Date();
+            var hour = now.getHours();
+            var minutes = now.getMinutes();
+            var totalminutes = hour * 60 + minutes;
+
+            var bluesCell = document.getElementsByClassName("blues")[0];
+            var jazzCell = document.getElementsByClassName("jazz")[0];
+            var rockCell = document.getElementsByClassName("rock")[0];
+            var randbCell = document.getElementsByClassName("randb")[0];
+            var chillCell = document.getElementsByClassName("chill")[0];
+            var bluesCellText  = document.getElementsByClassName("bluesText")[0];
+            var jazzCellText = document.getElementsByClassName("jazzText")[0];
+            var rockCellText = document.getElementsByClassName("rockText")[0];
+            var randbCellText  = document.getElementsByClassName("randbText")[0];
+            var chillCellText  = document.getElementsByClassName("chillText")[0];
+
+            if (totalminutes < 9 * 60 + 30) {
+                Mark(bluesCell, bluesCellText);
+            } else if (9 * 60 + 30 <= totalminutes < 12 * 60) {
+                Mark(jazzCell, jazzCellText);
+            } else if (12 * 60 <= totalminutes < 16 * 60 + 30) {
+                Mark(rockCell, rockCellText);
+            } else if (16 * 60 + 30 <= totalminutes < 20 * 60) {
+                Mark(randbCell, randbCellText);
+            } else {
+                Mark(chillCell, chillCellText);
+            }
+
+            function Mark(toMark, toMarkText){
+                if (toMark != undefined) {
+                    bluesCell.classList.remove("marked");
+                    jazzCell.classList.remove("marked");
+                    rockCell.classList.remove("marked");
+                    randbCell.classList.remove("marked");
+                    chillCell.classList.remove("marked");
+                    toMark.classList.add("marked");
+
+                    bluesCellText.classList.remove("markedText");
+                    jazzCellText.classList.remove("markedText");
+                    rockCellText.classList.remove("markedText");
+                    randbCellText.classList.remove("markedText");
+                    chillCellText.classList.remove("markedText");
+                    toMarkText.classList.add("markedText");
+                }
+            }
+        }, 3000);
     }
 
     render() {
@@ -37,10 +88,17 @@ export class Home extends Component {
             left: '32%'
         };
 
+        const iframe = '<iframe scrolling="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="no" style="margin-top: 10px; width: 50%; min-width:550px; height: 300px" src="https://share.xdevel.com/player/2300"></iframe>';
+
+        function Iframe(props) {
+            return (<div dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }} />);
+        }
+
         return (
             <div>
                 <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#ffffe6" spinnerType="circle-dots" />
                 <div className="mainContent">
+
                     <div style={contactStyle} className="pb-2">
                         <span className="pr-3 text-dark">
                             <svg className="bi bi-chat-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -48,13 +106,13 @@ export class Home extends Component {
                             </svg>
 
                      WhatsApp:+393332591460
-                    </span>
+                        </span>
                         <span className="pr-5 text-dark">
                             <svg className="bi bi-envelope-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
                             </svg>
-                    lifearthwebradio@gmail.com
-                    </span>
+                        lifearthwebradio@gmail.com
+                        </span>
                         <a href="https://www.facebook.com/Lifearth-Webradio-152018884864184">
                             <div className="hvr-bounce-in">
                                 <Icon path={mdiFacebook} title="Facebook" size={2} color="#4267B2" className="pr-2" />
@@ -74,6 +132,32 @@ export class Home extends Component {
 
                     <img src={Homelogo} className="rounded" alt="website homelogo" />
 
+                    <table>
+                        <tr>
+                            <td className="blues first-program"></td>
+                            <td className="jazz"></td>
+                            <td className="rock"></td>
+                            <td className="randb"></td>
+                            <td className="chill last-program"></td>
+                        </tr>
+                        <tr>
+                            <td className="bluesText">Blues</td>
+                            <td className="jazzText">Jazz</td>
+                            <td className="rockText">Rock</td>
+                            <td className="randbText">R&B</td>
+                            <td className="chillText">Chill</td>
+                        </tr>
+                    </table>
+
+                    <div className="divPlayer">
+                        <Iframe iframe={iframe} id="player" />
+                        <div >
+                            <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">
+                                <Icon path={mdiArrangeBringForward} title="PopUp Player" size="1.8rem" color="#b3b3b3" className="pr-2" className="popUpPlayer" />
+                            </a>
+                        </div>
+                    </div>
+
                     <div>
                         <div style={bodyColumn} className="float-left">
                             <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
@@ -85,25 +169,17 @@ export class Home extends Component {
                                     </div>
                                 </div>
                             </a>
-                            <a href="">
-                                <div className="card text-center mt-2 hvr-forward">
-                                    <img className="card-img-top" src={Portrait2} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Matteo</h5>
-                                        <p className="card-text">Progressive</p>
-                                    </div>
-                                </div>
-                            </a>
+
                         </div>
                         <div style={bodyCenterColumn} className="position-absolute mt-2">
-                            <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">Ascolta</a>
-                            <div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <div className="">
+                                Lorem impsum....
                             </div>
                         </div>
+
                         <div style={bodyColumn} className="float-right">
                             <a href="">
-                                <div className="card text-center mt-2 hvr-float-shadow">
+                                <div className="card text-center mt-2 hvr-bounce-to-bottom">
                                     <img className="card-img-top" src={Portrait1} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Carla</h5>
@@ -111,15 +187,8 @@ export class Home extends Component {
                                     </div>
                                 </div>
                             </a>
-                            <a href="">
-                                <div className="card text-center mt-2 hvr-pop">
-                                    <img className="card-img-top" src={Portrait2} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Matteo</h5>
-                                        <p className="card-text">Rock</p>
-                                    </div>
-                                </div>
-                            </a>
+
+
                         </div>
                     </div>
 
@@ -129,3 +198,6 @@ export class Home extends Component {
         );
     }
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Home />, rootElement);
