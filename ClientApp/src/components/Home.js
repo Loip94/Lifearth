@@ -24,7 +24,6 @@ export class Home extends Component {
         }, 2500);
 
         this.takeActualTime = setInterval(() => {
-            debugger;
             var now = new Date();
             var hour = now.getHours();
             var minutes = now.getMinutes();
@@ -35,25 +34,25 @@ export class Home extends Component {
             var rockCell = document.getElementsByClassName("rock")[0];
             var randbCell = document.getElementsByClassName("randb")[0];
             var chillCell = document.getElementsByClassName("chill")[0];
-            var bluesCellText  = document.getElementsByClassName("bluesText")[0];
+            var bluesCellText = document.getElementsByClassName("bluesText")[0];
             var jazzCellText = document.getElementsByClassName("jazzText")[0];
             var rockCellText = document.getElementsByClassName("rockText")[0];
-            var randbCellText  = document.getElementsByClassName("randbText")[0];
-            var chillCellText  = document.getElementsByClassName("chillText")[0];
+            var randbCellText = document.getElementsByClassName("randbText")[0];
+            var chillCellText = document.getElementsByClassName("chillText")[0];
 
-            if (totalminutes < 9 * 60 + 30) {
+            if (totalminutes < 570) {
                 Mark(bluesCell, bluesCellText);
-            } else if (9 * 60 + 30 <= totalminutes < 12 * 60) {
+            } else if (570 <= totalminutes && totalminutes < 720) {
                 Mark(jazzCell, jazzCellText);
-            } else if (12 * 60 <= totalminutes < 16 * 60 + 30) {
+            } else if (720 <= totalminutes && totalminutes < 990) {
                 Mark(rockCell, rockCellText);
-            } else if (16 * 60 + 30 <= totalminutes < 20 * 60) {
+            } else if (990 <= totalminutes && totalminutes < 1200) {
                 Mark(randbCell, randbCellText);
             } else {
                 Mark(chillCell, chillCellText);
             }
 
-            function Mark(toMark, toMarkText){
+            function Mark(toMark, toMarkText) {
                 if (toMark != undefined) {
                     bluesCell.classList.remove("marked");
                     jazzCell.classList.remove("marked");
@@ -99,7 +98,7 @@ export class Home extends Component {
                 <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#ffffe6" spinnerType="circle-dots" />
                 <div className="mainContent">
 
-                    <div style={contactStyle} className="pb-2">
+                    <div style={contactStyle}>
                         <span className="pr-3 text-dark">
                             <svg className="bi bi-chat-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
@@ -134,11 +133,21 @@ export class Home extends Component {
 
                     <table>
                         <tr>
-                            <td className="blues first-program"></td>
-                            <td className="jazz"></td>
-                            <td className="rock"></td>
-                            <td className="randb"></td>
-                            <td className="chill last-program"></td>
+                            <td className="blues first-program">
+                                <span class="tooltiptext">0:00 - 9:30</span>
+                            </td>
+                            <td className="jazz">
+                                <span class="tooltiptext">9:30 - 12:00</span>
+                            </td>
+                            <td className="rock">
+                                <span class="tooltiptext">12:00 - 16:30</span>
+                            </td>
+                            <td className="randb">
+                                <span class="tooltiptext">16:30 - 22:00</span>
+                            </td>
+                            <td className="chill last-program">
+                                <span class="tooltiptext">22:00 - 00:00</span>
+                            </td>
                         </tr>
                         <tr>
                             <td className="bluesText">Blues</td>

@@ -34,40 +34,58 @@ table {
 }
 
 tr {
-    height: 30px;
+    height: 50px;
     border-radius: 10px;
 }
 
 td {
     text-align: center;
-    font-family: Cookie;
-    font-size: 18px;
-    font-style: oblique;
+    font-family: 'Freestyle Script';
+    font-size: 24px;
+    /*font-style: oblique;*/
+}
+
+.hvr-bounce-in{
+    margin-bottom: 10px;
 }
 
 .blues {
     width: 30%;
-    background-color: #edeec9;
+    /*background-color: #edeec9;*/
+    background-image: url(../content/blues.jpg);
+    filter: grayscale(100%);
 }
 
 .jazz {
     width: 15%;
-    background-color: #dde7c7;
+    /*background-color: #dde7c7;*/
+    background-image: url(../content/jazz.jpg);
+    filter: grayscale(100%);
+    background-position: bottom right;
 }
 
 .rock {
     width: 25%;
-    background-color: #bfd8bd;
+    /*background-color: #bfd8bd;*/
+    background-image: url(../content/rock.png);
+    filter: grayscale(100%);
+    background-position: center;
 }
 
 .randb {
     width: 20%;
-    background-color: #98c9a3;
+    /*background-color: #98c9a3;*/
+    background-image: url(../content/r&b.jpg);
+    filter: grayscale(100%);
+    background-position: bottom;
 }
 
 .chill {
     width: 10%;
-    background-color: #77bfa3;
+    /*background-color: #77bfa3;*/
+    background-image: url(../content/chill.png);
+    filter: grayscale(100%);
+    background-position: center;
 }
 
 .first-program {
@@ -81,7 +99,7 @@ td {
 }
 
 .marked {
-    background-color: khaki;
+    filter: none !important;
 }
 
 .markedText {
