@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import Icon from '@mdi/react';
 import { SpinnerComponent } from 'react-element-spinner';
@@ -95,7 +95,7 @@ export class Home extends Component {
 
         return (
             <div>
-                <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#ffffe6" spinnerType="circle-dots" />
+                <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#ffffe6" spinnerType="circle-dots"/>
                 <div className="mainContent">
 
                     <div style={contactStyle}>
@@ -110,27 +110,28 @@ export class Home extends Component {
                             <svg className="bi bi-envelope-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
                             </svg>
-                        lifearthwebradio@gmail.com
+                     Lifearthwebradio@gmail.com
                         </span>
                         <a href="https://www.facebook.com/Lifearth-Webradio-152018884864184">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiFacebook} title="Facebook" size={2} color="#4267B2" className="pr-2" />
+                                <Icon path={mdiFacebook} title="Facebook" size={2} color="#4267B2" className="pr-2"/>
                             </div>
                         </a>
                         <a href="https://www.instagram.com/lifearth_webradio/?hl=it">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiInstagram} title="Instagram" size={2} color="#E1306C" className="pr-2" />
+                                <Icon path={mdiInstagram} title="Instagram" size={2} color="#E1306C" className="pr-2"/>
                             </div>
                         </a>
                         <a href="https://twitter.com/infolifearth">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiTwitter} title="Twitter" size={2} color="#1DA1F2" className="pr-2" />
+                                <Icon path={mdiTwitter} title="Twitter" size={2} color="#1DA1F2" className="pr-2"/>
                             </div>
                         </a>
                     </div>
 
-                    <img src={Homelogo} className="rounded" alt="website homelogo" />
+                    <img src={Homelogo} className="rounded" alt="website homelogo"/>
 
+                    <div className="barTitle">Daily Program</div>
                     <table>
                         <tr>
                             <td className="blues first-program">
@@ -158,50 +159,29 @@ export class Home extends Component {
                         </tr>
                     </table>
 
-                    <div className="divPlayer">
-                        <Iframe iframe={iframe} id="player" />
-                        <div >
-                            <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">
-                                <Icon path={mdiArrangeBringForward} title="PopUp Player" size="1.8rem" color="#b3b3b3" className="pr-2" className="popUpPlayer" />
-                            </a>
-                        </div>
-                    </div>
-
                     <div>
-                        <div style={bodyColumn} className="float-left">
+                        <div className="divPlayer float-left">
+                            <Iframe iframe={iframe} id="player"/>
+                            <div>
+                                <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">
+                                    <Icon path={mdiArrangeBringForward} title="PopUp Player" size="1.8rem" color="#b3b3b3" className="pr-2" className="popUpPlayer"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div style={bodyColumn} className="float-right andreaCard">
                             <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
                                 <div className="card text-center mt-2 hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                    <img className="card-img-top" src={AndreaC} alt="Card image cap"/>
                                     <div className="card-body">
                                         <h5 className="card-title">Andrea Ricci</h5>
                                         <p className="card-text">Rhythm & Blues</p>
                                     </div>
                                 </div>
                             </a>
-
-                        </div>
-                        <div style={bodyCenterColumn} className="position-absolute mt-2">
-                            <div className="">
-                                Lorem impsum....
-                            </div>
-                        </div>
-
-                        <div style={bodyColumn} className="float-right">
-                            <a href="">
-                                <div className="card text-center mt-2 hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={Portrait1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Carla</h5>
-                                        <p className="card-text">Rhythm & Blues</p>
-                                    </div>
-                                </div>
-                            </a>
-
-
                         </div>
                     </div>
 
-                    <img src={Banner} className="banner" alt="Whatsapp Banner" />
+                    <img src={Banner} className="banner" alt="Whatsapp Banner"/>
                 </div>
             </div>
         );
@@ -210,3 +190,35 @@ export class Home extends Component {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Home />, rootElement);
+
+//<div>
+                    //    <div style={bodyColumn} className="float-left">
+                    //        <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
+                    //            <div className="card text-center mt-2 hvr-bounce-to-bottom">
+                    //                <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                    //                <div className="card-body">
+                    //                    <h5 className="card-title">Andrea Ricci</h5>
+                    //                    <p className="card-text">Rhythm & Blues</p>
+                    //                </div>
+                    //            </div>
+                    //        </a>
+
+                    //    </div>
+                    //    <div style={bodyCenterColumn} className="position-absolute mt-2">
+                    //        <div className="">
+                    //            Lorem impsum....
+                    //        </div>
+                    //    </div>
+
+                    //    <div style={bodyColumn} className="float-right">
+                    //        <a href="">
+                    //            <div className="card text-center mt-2 hvr-bounce-to-bottom">
+                    //                <img className="card-img-top" src={Portrait1} alt="Card image cap" />
+                    //                <div className="card-body">
+                    //                    <h5 className="card-title">Carla</h5>
+                    //                    <p className="card-text">Rhythm & Blues</p>
+                    //                </div>
+                    //            </div>
+                    //        </a>
+                    //    </div>
+                    //</div>

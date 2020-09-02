@@ -14,12 +14,28 @@ card img {
     left: 0px;
 }
 
+.rounded {
+    border-radius: 10px !important;
+}
+
+.barTitle {
+    text-align: center;
+    font-family: 'Freestyle Script';
+    font-size: 24px;
+    margin-top: 10px;
+}
+
 .mainContent {
     visibility: hidden;
 }
 
+.andreaCard{
+    margin-right: 5%;
+}
+
 .divPlayer {
     display: flex;
+    margin-left: 5%;
 }
 
 svg.popUpPlayer {
@@ -30,7 +46,6 @@ svg.popUpPlayer {
 
 table {
     width: 100%;
-    margin-top: 10px;
 }
 
 tr {
