@@ -1,18 +1,35 @@
 ﻿a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
     }
 }
 
+.navbar {
+    background-color: #F8FDEB;
+    font-family: 'Freestyle Script';
+    /*color: #fba626;*/
+    font-size: 32px;
+}
+
+.nav-link {
+    color: #fc9802 !important;
+    text-shadow: 0 0 3px white, 0 0 5px white;
+}
+
+.navbar-nav li {
+    margin-right: 30px;
+}
+
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }

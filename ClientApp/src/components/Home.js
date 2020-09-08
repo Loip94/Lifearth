@@ -1,15 +1,18 @@
 ﻿import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import Icon from '@mdi/react';
+import ReactTooltip from 'react-tooltip';
+import CarouselComponent from "../other-components/Carousel";
+
 import { SpinnerComponent } from 'react-element-spinner';
 import { mdiFacebook, mdiInstagram, mdiTwitter, mdiArrangeBringForward } from '@mdi/js';
 import './Home.css';
 import './hover.css';
 
-import Homelogo from '../content/LifearthHomeLogo.jpg';
-import Portrait1 from '../content/Portrait1.jpg';
+import Homelogo from '../content/LifearthHomeLogoShort.png';
 import AndreaC from '../content/Andrea C.jpg';
 import Banner from '../content/banner_telegram.png';
+import FbBanner from '../content/fb_banner.png';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -34,25 +37,25 @@ export class Home extends Component {
             var rockCell = document.getElementsByClassName("rock")[0];
             var randbCell = document.getElementsByClassName("randb")[0];
             var chillCell = document.getElementsByClassName("chill")[0];
-            var bluesCellText = document.getElementsByClassName("bluesText")[0];
-            var jazzCellText = document.getElementsByClassName("jazzText")[0];
-            var rockCellText = document.getElementsByClassName("rockText")[0];
-            var randbCellText = document.getElementsByClassName("randbText")[0];
-            var chillCellText = document.getElementsByClassName("chillText")[0];
+            //var bluesCellText = document.getElementsByClassName("bluesText")[0];
+            //var jazzCellText = document.getElementsByClassName("jazzText")[0];
+            //var rockCellText = document.getElementsByClassName("rockText")[0];
+            //var randbCellText = document.getElementsByClassName("randbText")[0];
+            //var chillCellText = document.getElementsByClassName("chillText")[0];
 
             if (totalminutes < 570) {
-                Mark(bluesCell, bluesCellText);
+                Mark(bluesCell/*, bluesCellText*/);
             } else if (570 <= totalminutes && totalminutes < 720) {
-                Mark(jazzCell, jazzCellText);
+                Mark(jazzCell/*, jazzCellText*/);
             } else if (720 <= totalminutes && totalminutes < 990) {
-                Mark(rockCell, rockCellText);
+                Mark(rockCell/*, rockCellText*/);
             } else if (990 <= totalminutes && totalminutes < 1200) {
-                Mark(randbCell, randbCellText);
+                Mark(randbCell/*, randbCellText*/);
             } else {
-                Mark(chillCell, chillCellText);
+                Mark(chillCell/*, chillCellText*/);
             }
 
-            function Mark(toMark, toMarkText) {
+            function Mark(toMark/*, toMarkText*/) {
                 if (toMark != undefined) {
                     bluesCell.classList.remove("marked");
                     jazzCell.classList.remove("marked");
@@ -61,44 +64,32 @@ export class Home extends Component {
                     chillCell.classList.remove("marked");
                     toMark.classList.add("marked");
 
-                    bluesCellText.classList.remove("markedText");
-                    jazzCellText.classList.remove("markedText");
-                    rockCellText.classList.remove("markedText");
-                    randbCellText.classList.remove("markedText");
-                    chillCellText.classList.remove("markedText");
-                    toMarkText.classList.add("markedText");
+                    //bluesCellText.classList.remove("markedText");
+                    //jazzCellText.classList.remove("markedText");
+                    //rockCellText.classList.remove("markedText");
+                    //randbCellText.classList.remove("markedText");
+                    //chillCellText.classList.remove("markedText");
+                    //toMarkText.classList.add("markedText");
                 }
             }
         }, 3000);
     }
 
     render() {
-        const contactStyle = {
-            textAlign: 'center'
-        };
-
-        const bodyColumn = {
-            width: '15%',
-            paddingBottom: '100px',
-        };
-
-        const bodyCenterColumn = {
-            width: '36%',
-            left: '32%'
-        };
-
-        const iframe = '<iframe scrolling="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="no" style="margin-top: 10px; width: 50%; min-width:550px; height: 300px" src="https://share.xdevel.com/player/2300"></iframe>';
+        const iframe = '<iframe scrolling="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="no" style="width: 100%;height: 95%" src="https://share.xdevel.com/player/2300"></iframe>';
 
         function Iframe(props) {
-            return (<div dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }} />);
+            return (<div dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }} className="inner-player" />);
         }
 
         return (
             <div>
-                <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#ffffe6" spinnerType="circle-dots"/>
+                <ReactTooltip />
+                <SpinnerComponent loading={true} position="global" color="#ee9f2b" backgroundColor="#F6FBE0" spinnerType="circle-dots" />
+
                 <div className="mainContent">
 
-                    <div style={contactStyle}>
+                    <div className="contacts">
                         <span className="pr-3 text-dark">
                             <svg className="bi bi-chat-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
@@ -114,64 +105,62 @@ export class Home extends Component {
                         </span>
                         <a href="https://www.facebook.com/Lifearth-Webradio-152018884864184">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiFacebook} title="Facebook" size={2} color="#4267B2" className="pr-2"/>
+                                <Icon path={mdiFacebook} title="Facebook" size={2} color="#4267B2" className="pr-2" />
                             </div>
                         </a>
                         <a href="https://www.instagram.com/lifearth_webradio/?hl=it">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiInstagram} title="Instagram" size={2} color="#E1306C" className="pr-2"/>
+                                <Icon path={mdiInstagram} title="Instagram" size={2} color="#E1306C" className="pr-2" />
                             </div>
                         </a>
                         <a href="https://twitter.com/infolifearth">
                             <div className="hvr-bounce-in">
-                                <Icon path={mdiTwitter} title="Twitter" size={2} color="#1DA1F2" className="pr-2"/>
+                                <Icon path={mdiTwitter} title="Twitter" size={2} color="#1DA1F2" className="pr-2" />
                             </div>
                         </a>
                     </div>
 
-                    <img src={Homelogo} className="rounded" alt="website homelogo"/>
+                    <img src={Homelogo} className="rounded" alt="website homelogo" />
 
-                    <div className="barTitle">Daily Program</div>
                     <table>
                         <tr>
                             <td className="blues first-program">
-                                <span class="tooltiptext">0:00 - 9:30</span>
+                                <span className="tooltiptext">0:00 - 9:30 / Blues</span>
                             </td>
                             <td className="jazz">
-                                <span class="tooltiptext">9:30 - 12:00</span>
+                                <span className="tooltiptext">9:30 - 12:00 / Jazz</span>
                             </td>
                             <td className="rock">
-                                <span class="tooltiptext">12:00 - 16:30</span>
+                                <span className="tooltiptext">12:00 - 16:30 / Rock</span>
                             </td>
                             <td className="randb">
-                                <span class="tooltiptext">16:30 - 22:00</span>
+                                <span class="tooltiptext">16:30 - 22:00 / R&B</span>
                             </td>
                             <td className="chill last-program">
-                                <span class="tooltiptext">22:00 - 00:00</span>
+                                <span className="tooltiptext">22:00 - 00:00 / Chill</span>
                             </td>
-                        </tr>
-                        <tr>
-                            <td className="bluesText">Blues</td>
-                            <td className="jazzText">Jazz</td>
-                            <td className="rockText">Rock</td>
-                            <td className="randbText">R&B</td>
-                            <td className="chillText">Chill</td>
                         </tr>
                     </table>
 
-                    <div>
-                        <div className="divPlayer float-left">
-                            <Iframe iframe={iframe} id="player"/>
-                            <div>
-                                <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">
-                                    <Icon path={mdiArrangeBringForward} title="PopUp Player" size="1.8rem" color="#b3b3b3" className="pr-2" className="popUpPlayer"/>
-                                </a>
-                            </div>
+                    <div className="column left">
+                        <div className="row head">
+                            <img src={FbBanner} />
                         </div>
-                        <div style={bodyColumn} className="float-right andreaCard">
+                        <div className="row">
                             <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
-                                <div className="card text-center mt-2 hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap"/>
+                                <div className="card text-center hvr-bounce-to-bottom">
+                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Andrea Ricci</h5>
+                                        <p className="card-text">Rhythm & Blues</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="row">
+                            <a href="">
+                                <div className="card text-center hvr-bounce-to-bottom move-top">
+                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Andrea Ricci</h5>
                                         <p className="card-text">Rhythm & Blues</p>
@@ -181,7 +170,51 @@ export class Home extends Component {
                         </div>
                     </div>
 
-                    <img src={Banner} className="banner" alt="Whatsapp Banner"/>
+                    <div className="column middle">
+                        <div className="row player">
+                            <Iframe iframe={iframe} id="player" />
+                            <div className="popUpPlayer">
+                                <a href="javascript:window.open('https://share.xdevel.com/player/2300', 'listen', 'toolbars=0,scrollbars=0,location=0,statusbars=0,menubars=0,resizable=0,width=600,height=310');void(0);">
+                                    <p data-tip="Apri il player in una nuova scheda" data-type="light" data-effect="solid" data-offset="{'bottom':10, 'right':5}" data-background-color="#F6FBE0" data-text-color="#88b10f">
+                                        <Icon path={mdiArrangeBringForward} size="2.2rem" color="#b3b3b3" className="pr-2" />
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <CarouselComponent />
+                        </div>
+                    </div>
+
+                    <div className="column right">
+                        <div className="row head">
+                            <img src={FbBanner} />
+                        </div>
+                        <div className="row">
+                            <a href="">
+                                <div className="card text-center hvr-bounce-to-bottom">
+                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Carla</h5>
+                                        <p className="card-text">Rhythm & Blues</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="row">
+                            <a href="">
+                                <div className="card text-center hvr-bounce-to-bottom move-top">
+                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Carla</h5>
+                                        <p className="card-text">Rhythm & Blues</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <img src={Banner} className="banner" alt="Whatsapp Banner" />
                 </div>
             </div>
         );
@@ -191,34 +224,53 @@ export class Home extends Component {
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Home />, rootElement);
 
+//documentation for tooltips: https://www.npmjs.com/package/react-tooltip
+
+
 //<div>
-                    //    <div style={bodyColumn} className="float-left">
-                    //        <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
-                    //            <div className="card text-center mt-2 hvr-bounce-to-bottom">
-                    //                <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                    //                <div className="card-body">
-                    //                    <h5 className="card-title">Andrea Ricci</h5>
-                    //                    <p className="card-text">Rhythm & Blues</p>
-                    //                </div>
-                    //            </div>
-                    //        </a>
+//    <div style={bodyColumn} className="float-left">
+//        <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
+//            <div className="card text-center mt-2 hvr-bounce-to-bottom">
+//                <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+//                <div className="card-body">
+//                    <h5 className="card-title">Andrea Ricci</h5>
+//                    <p className="card-text">Rhythm & Blues</p>
+//                </div>
+//            </div>
+//        </a>
 
-                    //    </div>
-                    //    <div style={bodyCenterColumn} className="position-absolute mt-2">
-                    //        <div className="">
-                    //            Lorem impsum....
-                    //        </div>
-                    //    </div>
+//    </div>
+//    <div style={bodyCenterColumn} className="position-absolute mt-2">
+//        <div className="">
+//            Lorem impsum....
+//        </div>
+//    </div>
 
-                    //    <div style={bodyColumn} className="float-right">
-                    //        <a href="">
-                    //            <div className="card text-center mt-2 hvr-bounce-to-bottom">
-                    //                <img className="card-img-top" src={Portrait1} alt="Card image cap" />
-                    //                <div className="card-body">
-                    //                    <h5 className="card-title">Carla</h5>
-                    //                    <p className="card-text">Rhythm & Blues</p>
-                    //                </div>
-                    //            </div>
-                    //        </a>
-                    //    </div>
-                    //</div>
+//    <div style={bodyColumn} className="float-right">
+//        <a href="">
+//            <div className="card text-center mt-2 hvr-bounce-to-bottom">
+//                <img className="card-img-top" src={Portrait1} alt="Card image cap" />
+//                <div className="card-body">
+//                    <h5 className="card-title">Carla</h5>
+//                    <p className="card-text">Rhythm & Blues</p>
+//                </div>
+//            </div>
+//        </a>
+//    </div>
+//</div>
+
+
+
+//<div style={bodyColumn} className="andreaCard">
+//    <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
+//        <div className="card text-center mt-2 hvr-bounce-to-bottom">
+//            <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+//            <div className="card-body">
+//                <h5 className="card-title">Andrea Ricci</h5>
+//                <p className="card-text">Rhythm & Blues</p>
+//            </div>
+//        </div>
+//    </a>
+//</div>
+
+

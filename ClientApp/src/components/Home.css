@@ -8,6 +8,19 @@ card img {
     border: 2px solid #333333;
 }
 
+img {
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.contacts {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .banner {
     position: fixed;
     bottom: 0px;
@@ -25,27 +38,29 @@ card img {
     margin-top: 10px;
 }
 
+.tooltiptext {
+    text-shadow: -1px 0 #0d3300, 0 1px #0d3300, 1px 0 #0d3300, 0 -1px #0d3300;
+}
+
 .mainContent {
     visibility: hidden;
 }
 
-.andreaCard{
-    margin-right: 5%;
-}
-
 .divPlayer {
     display: flex;
-    margin-left: 5%;
+    margin-top: 10px;
 }
 
-svg.popUpPlayer {
+.popUpPlayer {
     position: relative;
-    right: 135px;
-    top: 270px;
+    left: 81%;
+    bottom: 57px;
+    width: 10px;
 }
 
 table {
     width: 100%;
+    margin-top: 30px;
 }
 
 tr {
@@ -60,19 +75,19 @@ td {
     /*font-style: oblique;*/
 }
 
-.hvr-bounce-in{
+.hvr-bounce-in {
     margin-bottom: 10px;
 }
 
 .blues {
-    width: 30%;
+    width: 20%;
     /*background-color: #edeec9;*/
     background-image: url(../content/blues.jpg);
     filter: grayscale(100%);
 }
 
 .jazz {
-    width: 15%;
+    width: 20%;
     /*background-color: #dde7c7;*/
     background-image: url(../content/jazz.jpg);
     filter: grayscale(100%);
@@ -80,7 +95,7 @@ td {
 }
 
 .rock {
-    width: 25%;
+    width: 20%;
     /*background-color: #bfd8bd;*/
     background-image: url(../content/rock.png);
     filter: grayscale(100%);
@@ -95,12 +110,67 @@ td {
     background-position: bottom;
 }
 
+.row {
+    height: 350px;
+    padding-top: 10px;
+}
+
+.head {
+    height: auto !important;
+    padding-top: 25px;
+}
+
+.player {
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
 .chill {
-    width: 10%;
+    width: 20%;
     /*background-color: #77bfa3;*/
     background-image: url(../content/chill.png);
     filter: grayscale(100%);
     background-position: center;
+}
+
+.column {
+    float: left;
+    padding-bottom: 100px;
+}
+
+.left {
+    padding-left: 15px;
+    padding-right: 30px;
+    margin-right: 5%;
+}
+
+.right {
+    padding-left: 30px;
+    padding-right: 15px;
+    margin-left: 5%;
+}
+
+.carousel {
+    width: 100% !important;
+}
+
+.inner-player {
+    height: 100%;
+    width: 100%;
+}
+
+.left, .right {
+    width: 15%;
+}
+
+.middle {
+    width: 60%;
+    margin: auto;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0px 0px;
 }
 
 .first-program {
@@ -120,4 +190,8 @@ td {
 .markedText {
     color: #f25c54;
     text-shadow: 2px 2px 5px khaki;
+}
+
+.move-top{
+    bottom: 50px;
 }
