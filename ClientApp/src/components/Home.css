@@ -25,6 +25,7 @@ img {
     position: fixed;
     bottom: 0px;
     left: 0px;
+    z-index: 3;
 }
 
 .rounded {
@@ -49,6 +50,8 @@ img {
 
 .tooltiptext {
     text-shadow: -1px 0 #0d3300, 0 1px #0d3300, 1px 0 #0d3300, 0 -1px #0d3300;
+    display: -webkit-inline-box;
+    padding-bottom: 5px;
 }
 
 .mainContent {
@@ -80,7 +83,7 @@ td {
     text-align: center;
     font-family: 'Freestyle Script';
     font-size: 24px;
-    /*font-style: oblique;*/
+    height: 50px;
 }
 
 .hvr-bounce-in {
@@ -214,6 +217,16 @@ td {
     text-shadow: 2px 2px 5px khaki;
 }
 
-.move-top{
+.move-top {
     bottom: 50px;
+}
+
+tr > span::after {
+    z-index: 2 !important;
+    /*top: 200px !important;*/
+    left: 18% !important;
+    border-radius: 10px 10px 10px 10px !important;
+    height: 400px !important;
+    width: 300px !important;
+    transition: 1s !important;
 }

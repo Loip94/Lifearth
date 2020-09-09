@@ -25,15 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="ClientApp\src\content\Andrea C.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ClientApp\src\content\LifearthHomeLogo.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="node_modules\hover.css\css\" />
   </ItemGroup>
 
