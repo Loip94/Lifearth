@@ -12,7 +12,7 @@ import './hover.css';
 import Homelogo from '../content/LifearthHomeLogoShort.png';
 import AndreaC from '../content/Andrea C.jpg';
 import Banner from '../content/banner_telegram.png';
-import FbBanner from '../content/fb_banner.png';
+import FbBanner from '../content/facebook_logo.png';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -122,6 +122,9 @@ export class Home extends Component {
 
                     <img src={Homelogo} className="rounded" alt="website homelogo" />
 
+                    <div className="programmation-title">
+                        LifEarth Daily Programmation
+                    </div>
                     <table>
                         <tr>
                             <td className="blues first-program">
@@ -213,6 +216,8 @@ export class Home extends Component {
                             </a>
                         </div>
                     </div>
+
+                    <div className="bottom-claim">Licenza SIAE n.:000999999</div>
 
                     <img src={Banner} className="banner" alt="Whatsapp Banner" />
                 </div>

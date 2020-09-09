@@ -1,3 +1,32 @@
-﻿.legend{
-    background-color: yellow !important;
+﻿.legend {
+    background-color: #ff8c1a !important;
+    box-shadow: 10px 20px 50px #ffa64d;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.carousel-status {
+    visibility: hidden;
+}
+
+button.control-next {
+    border-radius: 0px 10px 10px 0px;
+}
+
+button.control-prev {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.thumb.selected {
+    border: 2px solid #ee9f2b !important;
+    border-radius: 10px;
+}
+
+.dot{
+    background: orange !important;
+}
+
+.thumb:hover {
+    border: 2px solid #ffd9b3 !important;
+    border-radius: 10px;
 }
