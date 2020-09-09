@@ -90,7 +90,7 @@ td {
 .blues {
     width: 20%;
     /*background-color: #edeec9;*/
-    background-image: url(../content/blues.jpg);
+    background-image: url(../content/first_band.png);
     filter: grayscale(100%);
 }
 
@@ -118,6 +118,14 @@ td {
     background-position: bottom;
 }
 
+.chill {
+    width: 20%;
+    /*background-color: #77bfa3;*/
+    background-image: url(../content/chill.png);
+    filter: grayscale(100%);
+    background-position: center;
+}
+
 .row {
     height: 350px;
     padding-top: 10px;
@@ -128,18 +136,17 @@ td {
     padding-top: 25px;
 }
 
+.onAir {
+    height: 50px;
+    top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
 .player {
     background-color: black;
     border-radius: 10px;
     margin-top: 25px;
-}
-
-.chill {
-    width: 20%;
-    /*background-color: #77bfa3;*/
-    background-image: url(../content/chill.png);
-    filter: grayscale(100%);
-    background-position: center;
 }
 
 .column {

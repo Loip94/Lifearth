@@ -10,9 +10,10 @@ import './Home.css';
 import './hover.css';
 
 import Homelogo from '../content/LifearthHomeLogoShort.png';
-import AndreaC from '../content/Andrea C.jpg';
+import AndreaC from '../content/AndreaC_fb.png';
 import Banner from '../content/banner_telegram.png';
 import FbBanner from '../content/facebook_logo.png';
+import OnAir from '../content/live_on_air.png';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -32,6 +33,8 @@ export class Home extends Component {
             var minutes = now.getMinutes();
             var totalminutes = hour * 60 + minutes;
 
+            var onAir = document.getElementsByClassName("onAir")[0];
+
             var bluesCell = document.getElementsByClassName("blues")[0];
             var jazzCell = document.getElementsByClassName("jazz")[0];
             var rockCell = document.getElementsByClassName("rock")[0];
@@ -43,16 +46,21 @@ export class Home extends Component {
             //var randbCellText = document.getElementsByClassName("randbText")[0];
             //var chillCellText = document.getElementsByClassName("chillText")[0];
 
-            if (totalminutes < 570) {
+            if (totalminutes < 330) {
                 Mark(bluesCell/*, bluesCellText*/);
-            } else if (570 <= totalminutes && totalminutes < 720) {
+                onAir.style.marginLeft = "4%";
+            } else if (330 <= totalminutes && totalminutes < 750) {
                 Mark(jazzCell/*, jazzCellText*/);
-            } else if (720 <= totalminutes && totalminutes < 990) {
+                onAir.style.marginLeft = "24%";
+            } else if (750 <= totalminutes && totalminutes < 900) {
                 Mark(rockCell/*, rockCellText*/);
-            } else if (990 <= totalminutes && totalminutes < 1200) {
+                onAir.style.marginLeft = "44%";
+            } else if (900 <= totalminutes && totalminutes < 1200) {
                 Mark(randbCell/*, randbCellText*/);
+                onAir.style.marginLeft = "64%";
             } else {
                 Mark(chillCell/*, chillCellText*/);
+                onAir.style.marginLeft = "84%";
             }
 
             function Mark(toMark/*, toMarkText*/) {
@@ -99,9 +107,9 @@ export class Home extends Component {
                         </span>
                         <span className="pr-5 text-dark">
                             <svg className="bi bi-envelope-fill pr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                                <path fillRule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
                             </svg>
-                     Lifearthwebradio@gmail.com
+                     Infolifearth@gmail.com
                         </span>
                         <a href="https://www.facebook.com/Lifearth-Webradio-152018884864184">
                             <div className="hvr-bounce-in">
@@ -123,31 +131,34 @@ export class Home extends Component {
                     <img src={Homelogo} className="rounded" alt="website homelogo" />
 
                     <div className="programmation-title">
-                        LifEarth Daily Programmation
                     </div>
+
+                    <img src={OnAir} className="onAir" />
                     <table>
-                        <tr>
-                            <td className="blues first-program">
-                                <span className="tooltiptext">0:00 - 9:30 / Blues</span>
-                            </td>
-                            <td className="jazz">
-                                <span className="tooltiptext">9:30 - 12:00 / Jazz</span>
-                            </td>
-                            <td className="rock">
-                                <span className="tooltiptext">12:00 - 16:30 / Rock</span>
-                            </td>
-                            <td className="randb">
-                                <span class="tooltiptext">16:30 - 22:00 / R&B</span>
-                            </td>
-                            <td className="chill last-program">
-                                <span className="tooltiptext">22:00 - 00:00 / Chill</span>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td className="blues first-program">
+                                    <span className="tooltiptext">00:00 - 05:30</span>
+                                </td>
+                                <td className="jazz">
+                                    <span className="tooltiptext">05:30 - 12:30</span>
+                                </td>
+                                <td className="rock">
+                                    <span className="tooltiptext">12:30 - 15:00</span>
+                                </td>
+                                <td className="randb">
+                                    <span className="tooltiptext">15:00 - 20:00</span>
+                                </td>
+                                <td className="chill last-program">
+                                    <span className="tooltiptext">20:00 - 00:00</span>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                     <div className="column left">
                         <div className="row head">
-                            <img src={FbBanner} />
+                            <img />
                         </div>
                         <div className="row">
                             <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
@@ -191,7 +202,7 @@ export class Home extends Component {
 
                     <div className="column right">
                         <div className="row head">
-                            <img src={FbBanner} />
+                            <img />
                         </div>
                         <div className="row">
                             <a href="">
