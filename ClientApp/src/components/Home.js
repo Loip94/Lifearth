@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import Icon from '@mdi/react';
 import ReactTooltip from 'react-tooltip';
 import CarouselComponent from "../other-components/Carousel";
-import ReactImageTooltip from "react-image-tooltip";
 
 import { SpinnerComponent } from 'react-element-spinner';
 import { mdiFacebook, mdiInstagram, mdiTwitter, mdiArrangeBringForward } from '@mdi/js';
@@ -15,8 +14,6 @@ import Banner from '../content/banner_telegram.png';
 import OnAir from '../content/live_on_air.png';
 
 import AndreaC from '../content/AndreaC_fb.png';
-
-import FirstBand from '../content/first_band_text.png';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -140,11 +137,9 @@ export class Home extends Component {
                     <table>
                         <tbody>
                             <tr>
-                                <ReactImageTooltip image={FirstBand}>
-                                    <td className="blues first-program">
-                                        <span className="tooltiptext">00:00 - 05:30</span>
-                                    </td>
-                                </ReactImageTooltip>{" "}
+                                <td className="blues first-program">
+                                    <span className="tooltiptext">00:00 - 05:30</span>
+                                </td>
                                 <td className="jazz">
                                     <span className="tooltiptext">05:30 - 12:30</span>
                                 </td>
