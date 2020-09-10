@@ -166,7 +166,7 @@ export class Home extends Component {
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Andrea Ricci</h5>
-                                        <p className="card-text">Rhythm & Blues</p>
+                                        <p className="card-text"></p>
                                     </div>
                                 </div>
                             </a>
@@ -176,8 +176,8 @@ export class Home extends Component {
                                 <div className="card text-center hvr-bounce-to-bottom move-top">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="card-title">Andrea Ricci</h5>
-                                        <p className="card-text">Rhythm & Blues</p>
+                                        <h5 className="card-title">Federico</h5>
+                                        <p className="card-text"></p>
                                     </div>
                                 </div>
                             </a>
@@ -210,7 +210,7 @@ export class Home extends Component {
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Carla</h5>
-                                        <p className="card-text">Rhythm & Blues</p>
+                                        <p className="card-text"></p>
                                     </div>
                                 </div>
                             </a>
@@ -220,8 +220,8 @@ export class Home extends Component {
                                 <div className="card text-center hvr-bounce-to-bottom move-top">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="card-title">Carla</h5>
-                                        <p className="card-text">Rhythm & Blues</p>
+                                        <h5 className="card-title">Roberto</h5>
+                                        <p className="card-text"></p>
                                     </div>
                                 </div>
                             </a>
