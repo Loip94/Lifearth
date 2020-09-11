@@ -13,15 +13,15 @@ export default function CarouselComponent() {
         <div className="column middle carousel">
             <Carousel infiniteLoop useKeyboardArrows autoPlay>
                 <div>
-                    <img src={Autunno} />
+                    <img src={Autunno} alt="" />
                     <p className="legend">Legend 1</p>
                 </div>
                 <div>
-                    <img src={Estate} />
+                    <img src={Estate} alt="" />
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
-                    <img src={Inverno} />
+                    <img src={Inverno} alt="" />
                     <p className="legend">Legend 3</p>
                 </div>
             </Carousel>

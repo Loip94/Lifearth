@@ -23,17 +23,11 @@ export class NavMenu extends Component {
     }
 
     render() {
-        const logoStyle = {
-            height: '50px',
-            position: 'absolute',
-            top: '15px'
-        };
-
         return (
             <header>
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar" light>
                     <Container>
-                        <NavbarBrand tag={Link} to="/"><img src={Logo} style={logoStyle} /></NavbarBrand>
+                        <NavbarBrand tag={Link} to="/"><img src={Logo} className="lifearth-logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">

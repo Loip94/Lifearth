@@ -1,24 +1,34 @@
 ﻿@media only screen and (max-width: 1200px) {
     .left {
         padding-right: 0px !important;
+        transition: 0.5s;
     }
 
     .right {
         padding-left: 0px !important;
+        transition: 0.5s;
+    }
+
+    .popUpPlayer {
+        left: 77% !important;
+    }
+
+    .onAir {
+        height: 45px !important;
+        transition: 0.5s;
     }
 }
 
 @media only screen and (max-width: 991px) {
-    tr:hover {
-        height: 200px;
-    }
 
     .left, .right {
         width: 20%;
+        transition: 0.5s;
     }
 
     .middle {
         width: 50%;
+        transition: 0.5s;
     }
 
     .container, .container-sm, .container-md {
@@ -27,37 +37,220 @@
 
     .column {
         padding-bottom: unset !important;
+        transition: 0.5s;
     }
 
-    .bottom-claim {
-        padding-bottom: 80px !important;
+    .popUpPlayer {
+        left: 75% !important;
+        transition: 0.5s;
+    }
+
+    .onAir {
+        height: 40px !important;
+        transition: 0.5s;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .column.left, .column.right {
+    tr:hover {
+        height: 200px !important;
+    }
+
+    .mainContent {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .column.left {
         display: none;
+        transition: 0.5s;
+    }
+
+    .column.right {
+        padding-right: 15px !important;
     }
 
     .middle {
-        padding-left: 5%;
-        padding-right: 5%;
-        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 10px;
+        width: 80% !important;
+        transition: 0.5s;
+    }
+
+    .card-img-top {
+        height: 120px !important;
+        object-fit: cover;
+        object-position: 50% 0%;
+        transition: 0.5s;
+    }
+
+    .card-body {
+        height: 50px !important;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .move-top {
+        bottom: unset !important;
     }
 
     .carousel {
         padding-right: unset;
         padding-left: unset;
+        transition: 0.5s;
     }
 
     .column {
         padding-bottom: 50px !important;
+        transition: 0.5s;
     }
 
-    .bottom-claim {
-        top: 50px !important;
-        position: relative;
-        right: 10px;
+    .popUpPlayer {
+        left: 79% !important;
+        transition: 0.5s;
+    }
+
+    .rightA {
+        height: 170px;
+    }
+
+    .second-row {
+        padding-top: unset !important;
+        height: unset !important;
+    }
+
+    .hidden {
+        display: block !important;
+        padding-top: 5px;
+    }
+
+    .onAir {
+        height: 35px !important;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .popUpPlayer {
+        left: 77% !important;
+        transition: 0.5s;
+    }
+
+    .onAir {
+        height: 30px !important;
+        transition: 0.5s;
+    }
+
+    .popUpPlayer > a > p > svg {
+        width: 2.2rem !important;
+        height: 2.2rem !important;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .popUpPlayer {
+        left: 73% !important;
+        bottom: 58px;
+        transition: 0.5s;
+    }
+
+        .popUpPlayer > a > p > svg {
+            width: 2.4rem !important;
+            height: 2.4rem !important;
+            transition: 0.5s;
+        }
+}
+
+@media only screen and (max-width: 600px) {
+    tr:hover {
+        height: 175px !important;
+    }
+
+    .utilities {
+        display: none !important;
+    }
+
+    .socials {
+        display: block !important;
+        margin-left: 40px;
+    }
+
+    .popUpPlayer {
+        left: 78% !important;
+        bottom: 45px !important;
+        transition: 0.5s;
+    }
+
+    .row {
+        height: 250px !important;
+        transition: 0.5s;
+    }
+
+    .popUpPlayer > a > p > svg {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+        transition: 0.5s;
+    }
+
+    .card-img-top {
+        height: 100px !important;
+    }
+
+    .card-body {
+        height: 40px !important;
+    }
+
+    .rightA {
+        height: 140px;
+    }
+
+    .card {
+        width: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    tr:hover {
+        height: 150px !important;
+    }
+
+    .popUpPlayer {
+        left: 75% !important;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    tr:hover {
+        height: 125px !important;
+    }
+
+    .column.right {
+        display: none;
+    }
+
+    .middle {
+        padding-right: 15px !important;
+        width: 100% !important;
+        transition: 0.5s;
+    }
+
+    .popUpPlayer {
+        left: 78% !important;
+        transition: 0.5s;
+    }
+
+    .carousel {
+        margin-right: -9px !important;
     }
 }
 
@@ -75,6 +268,14 @@ img {
     border-radius: 10px;
 }
 
+.socials {
+    display: inline-block;
+}
+
+.utilities {
+    display: inline-block;
+}
+
 .card {
     border-radius: 10px;
 }
@@ -90,6 +291,7 @@ img {
     z-index: 3;
     min-height: 90px;
     object-fit: cover;
+    border-radius: unset !important;
 }
 
 .rounded {
@@ -130,7 +332,7 @@ img {
 .popUpPlayer {
     position: relative;
     left: 81%;
-    bottom: 57px;
+    bottom: 60px;
     width: 10px;
 }
 
@@ -211,22 +413,9 @@ td {
     z-index: 1;
 }
 
-.player {
-    background-color: black;
-    border-radius: 10px;
-    margin-top: 25px;
-}
-
 .column {
     float: left;
     padding-bottom: 50px;
-}
-
-.bottom-claim {
-    padding-bottom: 100px;
-    color: grey;
-    text-align: right;
-    font-size: 12px;
 }
 
 .left {
@@ -282,16 +471,11 @@ td {
     text-shadow: 2px 2px 5px khaki;
 }
 
-.move-top {
-    bottom: 50px;
+.hidden {
+    display: none;
 }
 
-/*tr > span::after {
-    z-index: 2 !important;*/
-/*top: 200px !important;*/
-/*left: 18% !important;*/
-/*border-radius: 10px 10px 10px 10px !important;
-    height: 300px !important;
-    width: 225px !important;
-    transition: 2s;
-}*/
+.second-row {
+    padding-top: 20px;
+    height: 280px;
+}
