@@ -11,8 +11,9 @@ import { mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
 import './Home.css';
 import './hover.css';
 
-import Homelogo from '../content/LifearthHomeLogoShort.png';
+import Homelogo from '../content/lifearth_home_logo_short.png';
 import Banner from '../content/banner_telegram.png';
+import BannerShort from '../content/banner_telegram_short.png';
 import OnAir from '../content/live_on_air.png';
 
 import AndreaC from '../content/AndreaC_fb.png';
@@ -144,40 +145,85 @@ export class Home extends Component {
                         </tbody>
                     </table>
 
-                    <div className="column left">
-                        <div className="row head">
-                            <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Andrea Ricci</h5>
-                                        <p className="card-text"></p>
+                    <div className="body-center">
+                        <div className="column left">
+                            <div className="row head">
+                                <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
+                                    <div className="card text-center hvr-bounce-to-bottom">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Andrea Ricci</h5>
+                                            <p className="card-text"></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                            <div className="row">
+                                <a className="second-row" href="">
+                                    <div className="card text-center hvr-bounce-to-bottom">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Federico</h5>
+                                            <p className="card-text"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div className="row">
-                            <a className="second-row" href="">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Federico</h5>
-                                        <p className="card-text"></p>
+
+                        <div className="column middle">
+                            <PlayerComponent />
+                            <div className="row">
+                                <CarouselComponent />
+                            </div>
+                        </div>
+
+                        <div className="column right">
+                            <div className="row head">
+                                <a href="">
+                                    <div className="card text-center hvr-bounce-to-bottom">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Carla</h5>
+                                            <p className="card-text"></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <a className="rightA hidden" href="">
+                                    <div className="card text-center hvr-bounce-to-bottom">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Federico</h5>
+                                            <p className="card-text"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="row">
+                                <a className="second-row" href="">
+                                    <div className="card text-center hvr-bounce-to-bottom move-top">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Roberto</h5>
+                                            <p className="card-text"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="rightA hidden" href="">
+                                    <div className="card text-center hvr-bounce-to-bottom move-top">
+                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Federico</h5>
+                                            <p className="card-text"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="column middle">
-                        <PlayerComponent />
-                        <div className="row">
-                            <CarouselComponent />
-                        </div>
-                    </div>
-
-                    <div className="column right">
-                        <div className="row head">
+                    <div className="hidden-cards">
+                        <div class="card-deck">
                             <a href="">
                                 <div className="card text-center hvr-bounce-to-bottom">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
@@ -187,7 +233,7 @@ export class Home extends Component {
                                     </div>
                                 </div>
                             </a>
-                            <a className="rightA hidden" href="">
+                            <a className="" href="">
                                 <div className="card text-center hvr-bounce-to-bottom">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
@@ -196,10 +242,8 @@ export class Home extends Component {
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                        <div className="row">
-                            <a className="second-row" href="">
-                                <div className="card text-center hvr-bounce-to-bottom move-top">
+                            <a className="" href="">
+                                <div className="card text-center hvr-bounce-to-bottom">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Roberto</h5>
@@ -207,8 +251,8 @@ export class Home extends Component {
                                     </div>
                                 </div>
                             </a>
-                            <a className="rightA hidden" href="">
-                                <div className="card text-center hvr-bounce-to-bottom move-top">
+                            <a className="" href="">
+                                <div className="card text-center hvr-bounce-to-bottom">
                                     <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Federico</h5>
@@ -219,7 +263,14 @@ export class Home extends Component {
                         </div>
                     </div>
 
-                    <img src={Banner} className="banner" alt="Whatsapp Banner" />
+                    <div className="info">
+                        <p>© 2020 Lifearth Web Radio</p>
+                        <p>Musile di Piave, 30024 (Venezia)</p>
+                        <p>Lic. SIAE xxxx/x/xxxx - Lic. SCF 483/16</p>
+                    </div>
+
+                    <img src={Banner} id="long-banner" className="banner" alt="Telegram Banner" />
+                    <img src={BannerShort} className="banner short-banner" alt="Telegram Banner" />
                 </div>
             </div>
         );
