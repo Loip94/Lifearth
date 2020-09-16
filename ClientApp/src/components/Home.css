@@ -90,9 +90,6 @@
 
     .card-body {
         height: 50px !important;
-    }
-
-    .card-body {
         padding: 0.5rem;
     }
 
@@ -107,7 +104,7 @@
     }
 
     .column {
-        padding-bottom: 50px !important;
+        padding-bottom: 25px !important;
         transition: 0.5s;
     }
 
@@ -200,11 +197,6 @@
         transition: 0.5s;
     }
 
-    .row {
-        height: 250px !important;
-        transition: 0.5s;
-    }
-
     .popUpPlayer > a > p > svg {
         width: 1.8rem !important;
         height: 1.8rem !important;
@@ -229,6 +221,10 @@
 
     .body-center {
         margin-bottom: 30px;
+    }
+
+    .right .row {
+        height: auto !important;
     }
 }
 
@@ -267,6 +263,10 @@
     .card {
         width: 90% !important;
     }
+
+    .carousel {
+        padding-bottom: unset !important;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -283,10 +283,6 @@
 @media only screen and (max-width: 510px) {
     tr:hover {
         height: 125px !important;
-    }
-
-    .carousel {
-        margin-right: -9px !important;
     }
 }
 
@@ -534,4 +530,27 @@ td {
     font-size: 11px;
     color: #3d3d29;
     line-height: 0.3;
+}
+
+.carousel .slide {
+    background: unset !important;
+}
+
+.legend {
+    font-size: 14px;
+}
+
+.col-3 {
+    padding-right: unset !important;
+}
+
+.hidden-cards .container .row {
+    margin: 5px;
+    height: 160px !important;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.hidden-cards .container .row .col-3:last-child{
+    padding-right: 5px;
 }

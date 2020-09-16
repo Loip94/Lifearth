@@ -223,49 +223,59 @@ export class Home extends Component {
                     </div>
 
                     <div className="hidden-cards">
-                        <div class="card-deck">
-                            <a href="">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Carla</h5>
-                                        <p className="card-text"></p>
-                                    </div>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-3">
+                                    <a href="">
+                                        <div className="card text-center hvr-bounce-to-bottom">
+                                            <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Carla</h5>
+                                                <p className="card-text"></p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a className="" href="">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Federico</h5>
-                                        <p className="card-text"></p>
-                                    </div>
+                                <div className="col-3">
+                                    <a className="" href="">
+                                        <div className="card text-center hvr-bounce-to-bottom">
+                                            <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Federico</h5>
+                                                <p className="card-text"></p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a className="" href="">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Roberto</h5>
-                                        <p className="card-text"></p>
-                                    </div>
+                                <div className="col-3">
+                                    <a className="" href="">
+                                        <div className="card text-center hvr-bounce-to-bottom">
+                                            <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Roberto</h5>
+                                                <p className="card-text"></p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a className="" href="">
-                                <div className="card text-center hvr-bounce-to-bottom">
-                                    <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Federico</h5>
-                                        <p className="card-text"></p>
-                                    </div>
+                                <div className="col-3">
+                                    <a className="" href="">
+                                        <div className="card text-center hvr-bounce-to-bottom">
+                                            <img className="card-img-top" src={AndreaC} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Federico</h5>
+                                                <p className="card-text"></p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
 
                     <div className="info">
                         <p>© 2020 Lifearth Web Radio</p>
-                        <p>Musile di Piave, 30024 (Venezia)</p>
+                        <p>Venezia (Italia)</p>
                         <p>Lic. SIAE xxxx/x/xxxx - Lic. SCF 483/16</p>
                     </div>
 

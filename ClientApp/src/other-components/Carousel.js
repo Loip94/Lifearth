@@ -4,26 +4,24 @@ import { Carousel } from 'react-responsive-carousel';
 
 import './Carousel.css';
 
-import Autunno from '../content/Autunno.png';
-import Estate from '../content/Estate.png';
-import Inverno from '../content/Inverno.png';
+import LifearthParty from '../content/lifearth_party.png';
 
 export default function CarouselComponent() {
     return (
         <div className="column middle carousel">
             <Carousel infiniteLoop useKeyboardArrows autoPlay>
                 <div>
-                    <img src={Autunno} alt="" />
-                    <p className="legend">Legend 1</p>
+                    <img src={LifearthParty} alt="" />
+                    <p className="legend">Lifearth Webradio e' finalmente online!</p>
                 </div>
-                <div>
+                {/*<div>
                     <img src={Estate} alt="" />
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
                     <img src={Inverno} alt="" />
                     <p className="legend">Legend 3</p>
-                </div>
+                </div>*/}
             </Carousel>
         </div>
     );
