@@ -396,15 +396,16 @@ td {
 
 .blues {
     width: 20%;
-    background-image: url(../content/blues.png);
+    background-image: url(../content/first_band.png);
     filter: grayscale(100%);
+    background-position: center;
 }
 
 .jazz {
     width: 20%;
-    background-image: url(../content/jazz.jpg);
+    background-image: url(../content/second_band.png);
     filter: grayscale(100%);
-    background-position: bottom right;
+    background-position: top center;
 }
 
 .rock {
@@ -554,3 +555,28 @@ td {
 .hidden-cards .container .row .col-3:last-child{
     padding-right: 5px;
 }
+
+/*.band-text {*/
+    /*display: none;*/
+    /*visibility: hidden;
+    max-height: 0px;
+    opacity: 0;*/
+    /*-webkit-transition: opacity 5s, visibility 5s;*/
+    /*transition: opacity 5s, visibility 5s;
+}
+
+.first-band {
+    color: white;
+}
+
+.second-band {
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+tr:hover .band-text {
+    visibility: visible;
+    padding: 5px;
+    opacity: 1;
+}*/
