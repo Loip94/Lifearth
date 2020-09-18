@@ -82,14 +82,14 @@
     }
 
     .card-img-top {
-        height: 120px !important;
+        height: 160px !important;
         object-fit: cover;
         object-position: 50% 0%;
         transition: 0.5s;
     }
 
     .card-body {
-        height: 50px !important;
+        height: 80px !important;
         padding: 0.5rem;
     }
 
@@ -138,6 +138,10 @@
 
     #long-banner {
         display: none !important;
+    }
+
+    .ms-second-card {
+        margin-top: 150px !important;
     }
 }
 
@@ -437,6 +441,10 @@ td {
 .head {
     height: auto !important;
     padding-top: 25px;
+}
+
+.fb-top-card {
+    margin-top: 40px;
 }
 
 .onAir {
