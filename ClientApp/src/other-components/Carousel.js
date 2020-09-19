@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import './Carousel.css';
 
 import LifearthParty from '../content/lifearth_party.png';
+import Slogan from '../content/slogan.png';
 
 export default function CarouselComponent() {
     return (
@@ -14,11 +15,10 @@ export default function CarouselComponent() {
                     <img src={LifearthParty} alt="" />
                     <p className="legend">Lifearth Webradio e' finalmente online!</p>
                 </div>
-                {/*<div>
-                    <img src={Estate} alt="" />
-                    <p className="legend">Legend 2</p>
-                </div>
                 <div>
+                    <img src={Slogan} alt="" />
+                </div>
+                {/*<div>
                     <img src={Inverno} alt="" />
                     <p className="legend">Legend 3</p>
                 </div>*/}

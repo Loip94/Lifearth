@@ -101,10 +101,12 @@
         bottom: unset !important;
     }
 
-    .carousel {
+    .carousel-slider {
         padding-right: unset;
         padding-left: unset;
         transition: 0.5s;
+        border: 1px solid lightgrey;
+        border-radius: 15px;
     }
 
     .column {
@@ -150,6 +152,11 @@
 
     .info {
         padding-top: 100px !important;
+    }
+
+    .column.middle.carousel {
+        padding-left: unset !important;
+        padding-right: unset !important;
     }
 }
 
@@ -318,6 +325,18 @@
 
     .player {
         height: 326px !important;
+    }
+
+    .short-banner {
+        display: none !important;
+    }
+
+    .phone-banner {
+        display: block !important;
+    }
+
+    .legend {
+        bottom: 0px !important;
     }
 }
 
@@ -489,6 +508,10 @@ td {
     padding-top: 10px;
 }
 
+.middle > :last-child {
+    padding-top: 10px !important;
+}
+
 .head {
     height: auto !important;
     padding-top: 50px;
@@ -580,6 +603,10 @@ td {
     display: none;
 }
 
+.phone-banner {
+    display: none;
+}
+
 .hidden-cards {
     display: none;
 }
@@ -602,6 +629,10 @@ td {
 
 .col-3 {
     padding-right: unset !important;
+}
+
+.carousel:hover .slide .legend {
+    opacity: 0.8 !important;
 }
 
 .hidden-cards .container .row {

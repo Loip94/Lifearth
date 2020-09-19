@@ -26,6 +26,10 @@ button.control-prev {
     background: orange !important;
 }
 
+.thumb {
+    border: unset !important;
+}
+
 .thumb:hover {
     border: 2px solid #ffd9b3 !important;
     border-radius: 10px;

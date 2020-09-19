@@ -14,6 +14,7 @@ import './hover.css';
 import Homelogo from '../content/lifearth_home_logo_short.png';
 import Banner from '../content/banner_telegram.png';
 import BannerShort from '../content/banner_telegram_short.png';
+import BannerPhone from '../content/banner_telegram_phone.png';
 import OnAir from '../content/live_on_air.png';
 
 import AndreaC from '../content/AndreaC_fb.png';
@@ -250,6 +251,7 @@ export class Home extends Component {
 
                     <img src={Banner} id="long-banner" className="banner" alt="Telegram Banner" />
                     <img src={BannerShort} className="banner short-banner" alt="Telegram Banner" />
+                    <img src={BannerPhone} className="banner phone-banner" alt="Telegram Banner" />
                 </div>
             </div>
         );
