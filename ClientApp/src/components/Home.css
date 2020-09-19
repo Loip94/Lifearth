@@ -53,6 +53,10 @@
         height: 40px !important;
         transition: 0.5s;
     }
+
+    .info {
+        padding-top: 60px !important;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -82,7 +86,7 @@
     }
 
     .card-img-top {
-        height: 160px !important;
+        /*height: 160px !important;*/
         object-fit: cover;
         object-position: 50% 0%;
         transition: 0.5s;
@@ -104,7 +108,7 @@
     }
 
     .column {
-        padding-bottom: 25px !important;
+        /*padding-bottom: 25px !important;*/
         transition: 0.5s;
     }
 
@@ -143,6 +147,16 @@
     .ms-second-card {
         margin-top: 150px !important;
     }
+
+    .info {
+        padding-top: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 806px) {
+    h5 {
+        font-size: 1.1rem !important;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -169,7 +183,7 @@
 
 @media only screen and (max-width: 700px) {
     .popUpPlayer {
-        left: 73% !important;
+        left: 79% !important;
         bottom: 58px;
         transition: 0.5s;
     }
@@ -179,15 +193,36 @@
             height: 2.4rem !important;
             transition: 0.5s;
         }
+
+    .head {
+        padding-top: 25px !important;
+    }
+
+    .column.right {
+        display: none;
+    }
+
+    .middle {
+        width: 100% !important;
+        transition: 0.5s;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     tr:hover {
-        height: 175px !important;
+        height: 200px !important;
     }
 
     .utilities {
         display: none !important;
+    }
+
+    .hidden-utils {
+        display: block !important;
+    }
+
+    .row:last-child {
+        height: 270px !important;
     }
 
     .socials {
@@ -196,14 +231,7 @@
     }
 
     .popUpPlayer {
-        left: 78% !important;
-        bottom: 45px !important;
-        transition: 0.5s;
-    }
-
-    .popUpPlayer > a > p > svg {
-        width: 1.8rem !important;
-        height: 1.8rem !important;
+        left: 75% !important;
         transition: 0.5s;
     }
 
@@ -230,6 +258,18 @@
     .right .row {
         height: auto !important;
     }
+    
+    .info {
+        padding-top: unset !important;
+    }
+
+    .card-body p {
+        display: none !important;
+    }
+
+    .hidden-utils {
+        margin-top: 70px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -237,17 +277,8 @@
         padding-bottom: 20px;
     }
 
-    .column.right {
-        display: none;
-    }
-
-    .middle {
-        width: 100% !important;
-        transition: 0.5s;
-    }
-
     .popUpPlayer {
-        left: 78% !important;
+        left: 74% !important;
         transition: 0.5s;
     }
 
@@ -274,19 +305,39 @@
 }
 
 @media only screen and (max-width: 550px) {
-    tr:hover {
-        height: 150px !important;
-    }
-
     .popUpPlayer {
-        left: 75% !important;
+        left: 72% !important;
         transition: 0.5s;
     }
 }
 
 @media only screen and (max-width: 510px) {
     tr:hover {
-        height: 125px !important;
+        height: 175px !important;
+    }
+
+    .player {
+        height: 326px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    tr:hover {
+        height: 150px !important;
+    }
+
+    .hidden-utils {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .player {
+        height: 250px !important;
+    }
+
+    .hidden-utils {
+        font-size: 11px !important;
     }
 }
 
@@ -440,7 +491,7 @@ td {
 
 .head {
     height: auto !important;
-    padding-top: 25px;
+    padding-top: 50px;
 }
 
 .fb-top-card {
@@ -560,17 +611,31 @@ td {
     border-radius: 15px;
 }
 
-.hidden-cards .container .row .col-3:last-child{
-    padding-right: 5px;
+    .hidden-cards .container .row .col-3:last-child {
+        padding-right: 5px;
+    }
+
+.hidden-utils {
+    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pr-3 svg {
+    margin-bottom: 5px;
+}
+
+.hidden-utils .pr-5 {
+    padding-right: unset !important;
 }
 
 /*.band-text {*/
-    /*display: none;*/
-    /*visibility: hidden;
+/*display: none;*/
+/*visibility: hidden;
     max-height: 0px;
     opacity: 0;*/
-    /*-webkit-transition: opacity 5s, visibility 5s;*/
-    /*transition: opacity 5s, visibility 5s;
+/*-webkit-transition: opacity 5s, visibility 5s;*/
+/*transition: opacity 5s, visibility 5s;
 }
 
 .first-band {
