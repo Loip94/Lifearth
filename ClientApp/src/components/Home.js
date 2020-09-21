@@ -16,6 +16,9 @@ import Banner from '../content/banner_telegram.png';
 import BannerShort from '../content/banner_telegram_short.png';
 import BannerPhone from '../content/banner_telegram_phone.png';
 import OnAir from '../content/live_on_air.png';
+import OnAirShort from '../content/live_on_air_2.png';
+import FbLifearthLogoLarge from '../content/fb_lifearth_large_logo.png';
+import FbAndreaLogoLarge from '../content/fb_andrea_large_logo.png';
 
 import AndreaC from '../content/AndreaC_fb.png';
 import Lifearth from '../content/Lifearth_fb.png';
@@ -39,6 +42,7 @@ export class Home extends Component {
             var totalminutes = hour * 60 + minutes;
 
             var onAir = document.getElementsByClassName("onAir")[0];
+            var onAirShort = document.getElementsByClassName("onAir")[1];
 
             var bluesCell = document.getElementsByClassName("blues")[0];
             var jazzCell = document.getElementsByClassName("jazz")[0];
@@ -48,19 +52,34 @@ export class Home extends Component {
 
             if (totalminutes < 330) {
                 Mark(bluesCell);
-                onAir.style.marginLeft = "4%";
+                if (onAir != null)
+                    onAir.style.marginLeft = "4%";
+                if (onAirShort != null)
+                    onAirShort.style.marginLeft = "4%";
             } else if (330 <= totalminutes && totalminutes < 750) {
                 Mark(jazzCell);
-                onAir.style.marginLeft = "24%";
+                if (onAir != null)
+                    onAir.style.marginLeft = "24%";
+                if (onAirShort != null)
+                    onAirShort.style.marginLeft = "24%";
             } else if (750 <= totalminutes && totalminutes < 900) {
                 Mark(rockCell);
-                onAir.style.marginLeft = "44%";
+                if (onAir != null)
+                    onAir.style.marginLeft = "44%";
+                if (onAirShort != null)
+                    onAirShort.style.marginLeft = "44%";
             } else if (900 <= totalminutes && totalminutes < 1200) {
                 Mark(randbCell);
-                onAir.style.marginLeft = "64%";
+                if (onAir != null)
+                    onAir.style.marginLeft = "64%";
+                if (onAirShort != null)
+                    onAirShort.style.marginLeft = "64%";
             } else {
                 Mark(chillCell);
-                onAir.style.marginLeft = "84%";
+                if (onAir != null)
+                    onAir.style.marginLeft = "84%";
+                if (onAirShort != null)
+                    onAirShort.style.marginLeft = "84%";
             }
 
             function Mark(toMark) {
@@ -124,7 +143,8 @@ export class Home extends Component {
                     <div className="programmation-title">
                     </div>
 
-                    <img src={OnAir} className="onAir" />
+                    <img src={OnAir} className="onAir onAir-large" />
+                    <img src={OnAirShort} className="onAir onAir-short" />
                     <table>
                         <tbody>
                             <tr>
@@ -160,17 +180,6 @@ export class Home extends Component {
                                     </div>
                                 </a>
                             </div>
-                            {/*<div className="row">
-                                <a className="second-row" href="">
-                                    <div className="card text-center hvr-bounce-to-bottom">
-                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Lifearth</h5>
-                                            <p className="card-text">in Aiuto di</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>*/}
                         </div>
 
                         <div className="column middle">
@@ -201,31 +210,16 @@ export class Home extends Component {
                                     </div>
                                 </a>
                             </div>
-                            {/*<div className="row">
-                                <a className="second-row" href="">
-                                    <div className="card text-center hvr-bounce-to-bottom move-top">
-                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Roberto</h5>
-                                            <p className="card-text"></p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a className="rightA hidden" href="">
-                                    <div className="card text-center hvr-bounce-to-bottom move-top">
-                                        <img className="card-img-top" src={AndreaC} alt="Card image cap" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Federico</h5>
-                                            <p className="card-text"></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>*/}
                         </div>
                     </div>
 
                     <div className="xs-facebook-links">
-                        
+                        <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
+                            <img src={FbLifearthLogoLarge} className="rounded" alt="website homelogo" />
+                        </a>
+                        <a href="https://www.facebook.com/Lifearth-in-Aiuto-di-677361828982899">
+                            <img src={FbAndreaLogoLarge} className="rounded" alt="website homelogo" />
+                        </a>
                     </div>
 
                     <div className="utilities hidden-utils">

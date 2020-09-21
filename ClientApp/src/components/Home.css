@@ -86,7 +86,6 @@
     }
 
     .card-img-top {
-        /*height: 160px !important;*/
         object-fit: cover;
         object-position: 50% 0%;
         transition: 0.5s;
@@ -105,12 +104,9 @@
         padding-right: unset;
         padding-left: unset;
         transition: 0.5s;
-        border: 1px solid lightgrey;
-        border-radius: 15px;
     }
 
     .column {
-        /*padding-bottom: 25px !important;*/
         transition: 0.5s;
     }
 
@@ -151,18 +147,27 @@
     }
 
     .info {
-        padding-top: 100px !important;
+        padding-top: 30px !important;
     }
 
     .column.middle.carousel {
         padding-left: unset !important;
         padding-right: unset !important;
     }
+
+    .row.head {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    h5 {
+        font-size: 1.0rem !important;
+    }
 }
 
-@media only screen and (max-width: 806px) {
-    h5 {
-        font-size: 1.1rem !important;
+@media only screen and (max-width: 811px) {
+    .card-text {
+        font-size: 14px;
     }
 }
 
@@ -213,6 +218,18 @@
         width: 100% !important;
         transition: 0.5s;
     }
+
+    .onAir-large {
+        display: none !important;
+    }
+
+    .onAir-short {
+        display: block !important;
+    }
+
+    .xs-facebook-links {
+        display: block !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -228,10 +245,6 @@
         display: block !important;
     }
 
-    .row:last-child {
-        height: 270px !important;
-    }
-
     .socials {
         display: block !important;
         margin-left: 40px;
@@ -242,30 +255,10 @@
         transition: 0.5s;
     }
 
-    .card-img-top {
-        height: 100px !important;
-    }
-
-    .card-body {
-        height: 40px !important;
-    }
-
-    .rightA {
-        height: 140px;
-    }
-
-    .card {
-        width: 100px !important;
-    }
-
     .body-center {
         margin-bottom: 30px;
     }
 
-    .right .row {
-        height: auto !important;
-    }
-    
     .info {
         padding-top: unset !important;
     }
@@ -275,7 +268,11 @@
     }
 
     .hidden-utils {
-        margin-top: 70px;
+        margin-top: 30px;
+    }
+
+    .xs-facebook-links a:first-child img {
+        margin-top: -50px !important;
     }
 }
 
@@ -297,15 +294,6 @@
         padding-right: 5px;
     }
 
-    .card-deck {
-        display: flex;
-        padding: 5% !important;
-    }
-
-    .card {
-        width: 90% !important;
-    }
-
     .carousel {
         padding-bottom: unset !important;
     }
@@ -315,6 +303,10 @@
     .popUpPlayer {
         left: 72% !important;
         transition: 0.5s;
+    }
+
+    .xs-facebook-links a:first-child img {
+        margin-top: -70px !important;
     }
 }
 
@@ -338,9 +330,37 @@
     .legend {
         bottom: 0px !important;
     }
+
+    .xs-facebook-links img {
+        margin-top: -40px !important;
+    }
+
+    .xs-facebook-links a:first-child img {
+        margin-top: -90px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .popUpPlayer {
+        left: 68% !important;
+        bottom: 59px !important;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .popUpPlayer {
+        left: 66% !important;
+        transition: 0.5s;
+    }
 }
 
 @media only screen and (max-width: 400px) {
+    .popUpPlayer {
+        left: 60% !important;
+        transition: 0.5s;
+    }
+
     tr:hover {
         height: 150px !important;
     }
@@ -348,15 +368,49 @@
     .hidden-utils {
         font-size: 12px !important;
     }
+
+    .middle > :last-child {
+        padding-top: unset !important;
+    }
+
+    .xs-facebook-links a:first-child img {
+        margin-top: -120px !important;
+    }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 351px) {
     .player {
         height: 250px !important;
     }
 
     .hidden-utils {
         font-size: 11px !important;
+    }
+
+    .popUpPlayer {
+        left: 67% !important;
+        bottom: 45px !important;
+        transition: 0.5s;
+    }
+
+        .popUpPlayer > a > p > svg {
+            width: 1.8rem !important;
+            height: 1.8rem !important;
+        }
+}
+
+@media only screen and (max-width: 303px) {
+    .popUpPlayer {
+        left: 62% !important;
+        transition: 0.5s;
+    }
+
+    .hidden-utils {
+        font-size: 10px !important;
+    }
+
+    .row {
+        height: 300px !important;
     }
 }
 
@@ -623,6 +677,11 @@ td {
     background: unset !important;
 }
 
+.carousel-slider {
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
 .legend {
     font-size: 14px;
 }
@@ -660,27 +719,18 @@ td {
     padding-right: unset !important;
 }
 
-/*.band-text {*/
-/*display: none;*/
-/*visibility: hidden;
-    max-height: 0px;
-    opacity: 0;*/
-/*-webkit-transition: opacity 5s, visibility 5s;*/
-/*transition: opacity 5s, visibility 5s;
+.onAir-short {
+    display: none;
 }
 
-.first-band {
-    color: white;
+.xs-facebook-links {
+    display: none;
 }
 
-.second-band {
-    color: black;
-    font-weight: bold;
-    font-size: 22px;
+.xs-facebook-links {
+    padding-top: 40px;
 }
 
-tr:hover .band-text {
-    visibility: visible;
-    padding: 5px;
-    opacity: 1;
-}*/
+    .xs-facebook-links img:last-child {
+        margin-top: 20px !important;
+    }
