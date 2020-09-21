@@ -191,7 +191,7 @@ export class Home extends Component {
 
                         <div className="column right">
                             <div className="row head">
-                                <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal" className="rightA hidden fb-top-card">
+                                <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal" className="rightA hidden-top-card fb-top-card">
                                     <div className="card text-center hvr-bounce-to-bottom">
                                         <img className="card-img-top" src={AndreaC} alt="Card image cap" />
                                         <div className="card-body">

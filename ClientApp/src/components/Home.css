@@ -124,7 +124,7 @@
         height: unset !important;
     }
 
-    .hidden {
+    .hidden-top-card {
         display: block !important;
         padding-top: 5px;
     }
@@ -154,20 +154,11 @@
         padding-left: unset !important;
         padding-right: unset !important;
     }
-
-    .row.head {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-    h5 {
-        font-size: 1.0rem !important;
-    }
 }
 
 @media only screen and (max-width: 811px) {
-    .card-text {
-        font-size: 14px;
+    h5 {
+        font-size: 1.1rem !important;
     }
 }
 
@@ -644,7 +635,7 @@ td {
     text-shadow: 2px 2px 5px khaki;
 }
 
-.hidden {
+.hidden-top-card {
     display: none;
 }
 
