@@ -243,9 +243,11 @@ export class Home extends Component {
                         <p>© 2020 Lifearth Web Radio</p>
                     </div>
 
-                    <img src={Banner} id="long-banner" className="banner" alt="Telegram Banner" />
-                    <img src={BannerShort} className="banner short-banner" alt="Telegram Banner" />
-                    <img src={BannerPhone} className="banner phone-banner" alt="Telegram Banner" />
+                    <a href="https://t.me/lifearthwebradio">
+                        <img src={Banner} id="long-banner" className="banner" alt="Telegram Banner" />
+                        <img src={BannerShort} className="banner short-banner" alt="Telegram Banner" />
+                        <img src={BannerPhone} className="banner phone-banner" alt="Telegram Banner" />
+                    </a>
                 </div>
             </div>
         );

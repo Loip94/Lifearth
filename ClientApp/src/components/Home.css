@@ -529,21 +529,21 @@ td {
 
 .rock {
     width: 20%;
-    background-image: url(../content/rock.png);
+    background-image: url(../content/third_band.jpg);
     filter: grayscale(100%);
     background-position: center;
 }
 
 .randb {
     width: 20%;
-    background-image: url(../content/r&b.jpg);
+    background-image: url(../content/fourth_band.jpg);
     filter: grayscale(100%);
     background-position: bottom;
 }
 
 .chill {
     width: 20%;
-    background-image: url(../content/chill.png);
+    background-image: url(../content/fifth_band.png);
     filter: grayscale(100%);
     background-position: center;
 }
