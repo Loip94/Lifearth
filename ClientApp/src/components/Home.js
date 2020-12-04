@@ -215,10 +215,10 @@ export class Home extends Component {
 
                     <div className="xs-facebook-links">
                         <a href="https://www.facebook.com/Andrea-Ricci-1080380418678688/?ref=page_internal">
-                            <img src={FbLifearthLogoLarge} className="rounded" alt="website homelogo" />
+                            <img src={FbLifearthLogoLarge} className="hvr-wobble-horizontal rounded" alt="website homelogo" />
                         </a>
                         <a href="https://www.facebook.com/Lifearth-in-Aiuto-di-677361828982899">
-                            <img src={FbAndreaLogoLarge} className="rounded" alt="website homelogo" />
+                            <img src={FbAndreaLogoLarge} className="hvr-wobble-horizontal rounded" alt="website homelogo" />
                         </a>
                     </div>
 
@@ -240,6 +240,7 @@ export class Home extends Component {
                     <div className="info">
                         <p>Venezia (Italia)</p>
                         <p>Lic. SCF 153/5/20</p>
+                        <p>Lic. SIAE 202000000302</p>
                         <p>© 2020 Lifearth Web Radio</p>
                     </div>
 

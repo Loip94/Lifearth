@@ -299,6 +299,10 @@
     .xs-facebook-links a:first-child img {
         margin-top: -70px !important;
     }
+
+    .xs-facebook-links img:last-child {
+        margin-top: unset !important;
+    }
 }
 
 @media only screen and (max-width: 510px) {
@@ -679,10 +683,6 @@ td {
 
 .col-3 {
     padding-right: unset !important;
-}
-
-.carousel:hover .slide .legend {
-    opacity: 0.8 !important;
 }
 
 .hidden-cards .container .row {

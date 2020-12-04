@@ -5,6 +5,10 @@
     border: 2px solid white !important;
 }
 
+.carousel:hover .slide .legend {
+    opacity: 0.95 !important;
+}
+
 .carousel-status {
     visibility: hidden;
 }
@@ -22,7 +26,7 @@ button.control-prev {
     border-radius: 10px;
 }
 
-.dot{
+.dot {
     background: orange !important;
 }
 
@@ -30,7 +34,7 @@ button.control-prev {
     border: unset !important;
 }
 
-.thumb:hover {
-    border: 2px solid #ffd9b3 !important;
-    border-radius: 10px;
-}
+    .thumb:hover {
+        border: 2px solid #ffd9b3 !important;
+        border-radius: 10px;
+    }
