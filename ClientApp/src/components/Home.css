@@ -179,9 +179,9 @@
         transition: 0.5s;
     }
 
-    .info {
+    /*.info {
         text-align: center !important;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 700px) {
