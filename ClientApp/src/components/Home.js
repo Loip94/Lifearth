@@ -20,7 +20,7 @@ import OnAirShort from '../content/live_on_air_2.png';
 import FbLifearthLogoLarge from '../content/fb_lifearth_large_logo.png';
 import FbAndreaLogoLarge from '../content/fb_andrea_large_logo.png';
 
-import AndreaC from '../content/AndreaC_fb.png';
+import AndreaC from '../content/AndreaC_fb_new.png';
 import Lifearth from '../content/Lifearth_fb.png';
 
 export class Home extends Component {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Staff.css';
 
+import Andrea from '../content/AndreaC_biography.jpg';
+
 export class Staff extends Component {
     static displayName = Staff.name;
 
@@ -21,9 +23,11 @@ export class Staff extends Component {
             <div className="text-container">
                 <h1>Chi sono?</h1>
                 <hr />
-                <p>
-                    Ciao sono Andrea Ricci, <br />
-                    l'ideatore del progetto Lifearth Webradio. <br /><br />
+                <div>
+                    <img className="andrea_bio" src={Andrea} alt="Andrea Ricci" />
+                    <p class="pPad">
+                    Ciao, <br />
+                    sono <strong>Andrea Ricci</strong> l'ideatore del progetto Lifearth Webradio. <br /><br />
                     Il mio amore per la radio ha radici profonde:
                     a meta' degli anni settanta, periodo in cui nacquero le prime radio libere,
                     si accese in me la passione per la musica e capii subito di voler far parte di questo mondo. <br /><br />
@@ -46,7 +50,7 @@ export class Staff extends Component {
                     Con queste premesse l'obbiettivo di Lifearth e' subito spiegato. <br /><br />
 
                     Il progetto unisce i tre principi in cui credo fermamente, con lo scopo di trasmetterli a piu' persone possibili: <br />
-                    <i> "Sana Alimentazione, Natura e Buona Musica" </i>, il mio motto.
+                        <i> "Sana Alimentazione, Natura e Buona Musica" </i>, il mio motto.
 
                     Nulla di presuntuoso ma certamente pretenzioso. <br /><br />
 
@@ -54,10 +58,11 @@ export class Staff extends Component {
 
                     Seguiteci Anime e Buona Vita. <br /><br /><br />
 
-                    <p className="collaboration">
-                        Di seguito alcune delle mie vecchie collaborazioni: RM5 - RADIO KELLY MILANO - ROBY CLUB RHO - STEREO CLUB COLTURANO - RADIO VENEZIA - RADIO BELLAEMONELLA - RSD - UPRADIO - SUPERSONIC.
+                        <p className="collaboration">
+                            Di seguito alcune delle mie vecchie collaborazioni: RM5 - RADIO KELLY MILANO - ROBY CLUB RHO - STEREO CLUB COLTURANO - RADIO VENEZIA - RADIO BELLAEMONELLA - RSD - UPRADIO - SUPERSONIC.
+                        </p>
                     </p>
-                </p>
+                </div>
             </div>
         );
     }

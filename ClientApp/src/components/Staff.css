@@ -6,3 +6,14 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.andrea_bio {
+    width: 50%;
+    display: inline;
+    float: right;
+    margin: 40px 0px 30px 30px;
+}
+
+.pPad {
+    padding-bottom: 1rem;
+}

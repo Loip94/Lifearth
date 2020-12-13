@@ -26,7 +26,7 @@ export default function CarouselComponent() {
                 </div>
                 <div>
                     <img src={Natale} alt="" />
-                    <p className="legend">Da giovedi' 24 Dicembre fino a sabato 27 Dicembre</p>
+                    <p className="legend">Da giovedi' 24 Dicembre fino a sabato 26 Dicembre</p>
                 </div>
             </Carousel>
         </div>
