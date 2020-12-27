@@ -7,7 +7,6 @@ import './Carousel.css';
 import LifearthParty from '../content/lifearth_party.png';
 import Slogan from '../content/slogan.png';
 import Aggregatori from '../content/aggregatori_banner.png';
-import Natale from '../content/natale_banner.jpg';
 
 export default function CarouselComponent() {
     return (
@@ -23,10 +22,6 @@ export default function CarouselComponent() {
                 <div>
                     <img src={Aggregatori} alt="" />
                     <p className="legend">Lifearth puo' ora essere sentita su tre diversi aggregatori di radio: <a href="http://www.radio-italiane.it/lifearth-webradio">Radio-taliane.it</a>, <a href="http://radio.garden/listen/lifearth-web-radio/yAcFjKgI">Radio Garden</a> e <a href="https://www.fm-world.it/"> Fm-World</a>! <br/> Buon ascolto!</p>
-                </div>
-                <div>
-                    <img src={Natale} alt="" />
-                    <p className="legend">Da giovedi' 24 Dicembre fino a sabato 26 Dicembre</p>
                 </div>
             </Carousel>
         </div>
