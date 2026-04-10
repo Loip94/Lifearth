@@ -15,9 +15,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 
 WORKDIR /app
 COPY --from=build /app/publish .
-COPY docker-entrypoint.sh .
-RUN chmod +x docker-entrypoint.sh
 
 EXPOSE 8080
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+# Use shell form so ${PORT} is expanded at runtime (Railway injects PORT).
+CMD ["sh", "-c", "exec dotnet LifEarthWebRadio.dll --urls http://+:${PORT:-8080}"]
