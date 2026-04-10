@@ -7,7 +7,7 @@ import CarouselComponent from "../other-components/Carousel";
 import PlayerComponent from "../other-components/Player";
 
 import { SpinnerComponent } from 'react-element-spinner';
-import { mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
+import { mdiFacebook, mdiInstagram, mdiAlphaXCircleOutline } from '@mdi/js';
 import './Home.css';
 import './hover.css';
 
@@ -132,7 +132,7 @@ export class Home extends Component {
                             </a>
                             <a href="https://twitter.com/infolifearth">
                                 <div className="hvr-bounce-in">
-                                    <Icon path={mdiTwitter} title="Twitter" size={2} color="#1DA1F2" className="pr-2" />
+                                    <Icon path={mdiAlphaXCircleOutline} title="X" size={2} color="#2f2f2f" className="pr-2" />
                                 </div>
                             </a>
                         </div>
