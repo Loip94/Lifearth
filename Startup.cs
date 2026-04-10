@@ -44,7 +44,11 @@ namespace LifEarthWebRadio
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // Only redirect to HTTPS in local dev; in production Railway terminates SSL externally.
+            if (env.IsDevelopment())
+            {
+                app.UseHttpsRedirection();
+            }
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

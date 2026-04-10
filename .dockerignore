@@ -1,0 +1,7 @@
+obj/
+bin/
+publish_output/
+ClientApp/node_modules/
+ClientApp/build/
+*.user
+.vs/
